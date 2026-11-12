@@ -1,0 +1,35 @@
+order,leg,site,name,type,lat,lon,depth_m_GMRT,jurisdiction_checked,jurisdiction_in_route_v2,arrival_UTC_est,departure_UTC_est,ops_hours,CS_h,C1_h,C2_h,MN_h,NP_h,NM_h,CA_h,MT_h,note
+1,,Nou,Nouméa,port,-22.2758,166.458,14,High seas,France – Nouvelle-Calédonie,2027-07-13 08:00,2027-07-13 08:00,0,,,,,,,,,
+2,1,Loy1,Loy1 (test),station,-20.7407,165.8483,2381,France (New Caledonia),France – Nouvelle-Calédonie,2027-07-13 17:53,2027-07-14 03:53,10.0,3.0,,,,,,7.0,,water column moved to a separate station
+3,1,HY1_1,Water-column station (hydrology/biology),hydro,-15.23,162.534,4440,France (New Caledonia),,2027-07-15 18:00,2027-07-16 03:00,9,,2,3,2,1,1,,,
+4,1,HY1_2,Water-column station (hydrology/biology),hydro,-5.46,157.463,2149,Papua New Guinea,,2027-07-18 21:00,2027-07-19 06:00,9,,2,3,2,1,1,,,
+5,1,OJP_1,Explo1,station,-4.0,157.0,1588,Papua New Guinea,Haute mer (None),2027-07-19 15:11,2027-07-20 15:11,24.0,6.0,,3.0,,,,12.0,3.0,water column moved to a separate station
+6,1,OJP_2,92BX,station,-2.225,156.998,1601,Papua New Guinea,Papouasie-Nouvelle-Guinée,2027-07-21 01:50,2027-07-21 11:50,10.0,1.0,2.0,,2.0,1,1,,3.0,water column done at this station (cadence)
+7,1,OJP_3,83BX,station,1.402,156.31,2360,Federated States of Micronesia,États fédérés de Micronésie,2027-07-22 10:00,2027-07-22 18:00,8.0,1.0,,3.0,,,,,4.0,water column moved to a separate station
+8,1,OJP_4,ODP 807,station,3.607,156.625,2804,Federated States of Micronesia,États fédérés de Micronésie,2027-07-23 07:23,2027-07-24 05:23,22.0,1.0,2.0,,2.0,1.0,1.0,12.0,3.0,water column done at this station (cadence)
+9,1,OJP_5,120BX,station,-0.025,158.693,2256,High seas,Papouasie-Nouvelle-Guinée,2027-07-25 06:28,2027-07-25 22:28,16.0,1.0,,,,,,12.0,3.0,water column moved to a separate station
+10,1,OJP_6,ODP 806,station,0.32,159.369,2521,High seas,États fédérés de Micronésie,2027-07-26 03:02,2027-07-27 01:02,22.0,1.0,2.0,,2.0,1.0,1.0,12.0,3.0,water column done at this station (cadence)
+11,1,OJP_7,123BX,station,-0.022,160.415,2972,High seas,États fédérés de Micronésie,2027-07-27 07:38,2027-07-27 15:38,8.0,1.0,,3.0,,,,,4.0,water column moved to a separate station
+12,1,OJP_9,128BX,station,-0.005,160.427,2965,High seas,États fédérés de Micronésie,2027-07-27 15:45,2027-07-28 05:45,14.0,1.0,,,,,,8.0,5.0,water column moved to a separate station
+13,1,OJP_8,125BX,station,-0.003,160.998,3368,High seas,États fédérés de Micronésie,2027-07-28 09:11,2027-07-28 15:11,6.0,1.0,,,,,,,5.0,water column moved to a separate station
+14,1,HY1_3,Water-column station (hydrology/biology),hydro,-0.198,163.462,4457,High seas,,2027-07-29 06:02,2027-07-29 15:02,9,,2,3,2,1,1,,,
+15,1,NT_1,VM19-96,station,-0.867,172.0,4267,Kiribati (Gilbert Islands),Kiribati – îles Gilbert,2027-07-31 18:27,2027-08-01 22:27,28.0,3.0,2.0,3.0,2.0,1,1.0,12.0,4.0,water column done at this station (cadence)
+16,1,NT_2,VM28-225,station,-8.333,174.467,5247,Tuvalu,Tuvalu,2027-08-03 21:38,2027-08-05 01:38,28.0,3.0,2.0,3.0,2.0,1.0,1.0,12.0,4.0,water column done at this station (cadence)
+17,,NT_3,NT_3 (joker),station,-10.5,179.0,4558,Tuvalu,Tuvalu (limite Est) – à confirmer,2027-08-06 07:28,2027-08-06 07:28,0,,,,,,,,,
+18,1,HY1_4,Water-column station (hydrology/biology),hydro,-12.15,-176.16,2247,France (Wallis and Futuna),,2027-08-07 13:38,2027-08-07 22:38,9,,2,3,2,1,1,,,
+19,,Apia,Apia,port,-13.833,-171.783,-357,High seas,Samoa,2027-08-09 02:31,2027-08-09 02:31,0,,,,,,,,,
+20,,Apia,Apia,port,-13.833,-171.783,-357,High seas,Samoa,2027-08-31 08:00,2027-08-31 08:00,0,,,,,,,,,
+21,2,ESAM,ESAM (ex-WTOK),station,-12.5,-168.0,5405,USA (American Samoa),Haute mer (ABNJ) – à confirmer,2027-09-01 07:31,2027-09-01 16:31,9.0,1.0,,3.0,,,,,5.0,water column moved to a separate station
+22,2,MH_3,ManiHiki 1,station,-11.1622,-162.8885,2767,NZ (Cook Islands),Îles Cook,2027-09-02 23:36,2027-09-03 17:36,18.0,1.0,2.0,,2,1,1,8.0,3.0,water column done at this station (cadence)
+23,2,MH_4,ManiHiki High Plateau,station,-11.051,-161.532,3018,NZ (Cook Islands),Îles Cook,2027-09-04 01:37,2027-09-04 17:37,16.0,,,,,,,12.0,4.0,water column moved to a separate station
+24,2,MH_1,ManiHiki Western Plateaus,station,-7.199,-165.053,3608,High seas,Kiribati – îles Line,2027-09-06 00:46,2027-09-06 12:46,12.0,3.0,2.0,,2,1,1,,3.0,water column done at this station (cadence)
+25,2,MH_2,ManiHiki North Plateau,station,-3.792,-164.887,3143,High seas,Kiribati – îles Line,2027-09-07 09:15,2027-09-08 06:15,21.0,3.0,,3.0,,,,12.0,3.0,water column moved to a separate station
+26,2,HY2_1,Water-column station (hydrology/biology),hydro,-0.837,-164.0,5344,High seas,,2027-09-09 00:46,2027-09-09 09:46,9,,2,3,2,1,1,,,
+27,2,LI_2,Line islands north,station,7.04,-161.63,3063,USA (Palmyra Atoll),États-Unis – Palmyra/Kingman,2027-09-11 11:09,2027-09-12 16:09,29.0,6.0,3.0,1.0,2.0,1.0,1.0,12.0,3.0,water column done at this station (cadence)
+28,2,LI_1,Line islands south,station,0.48,-156.45,2967,Kiribati (Line Group),Kiribati – îles Line,2027-09-14 18:17,2027-09-15 18:17,24.0,3.0,3.0,3.0,2.0,1.0,1.0,8.0,3.0,water column done at this station (cadence)
+29,2,CHAL,Challenger,station,-3.6443,-152.3389,4793,Kiribati (Line Group),France – Polynésie française,2027-09-17 05:14,2027-09-17 14:14,9.0,3.0,,1.0,,,,,5.0,water column moved to a separate station
+30,2,HY2_2,Water-column station (hydrology/biology),hydro,-6.261,-151.792,5065,High seas,,2027-09-18 06:17,2027-09-18 15:17,9,,2,3,2,1,1,,,
+31,2,VOST,Vostok,station,-10.0,-151.0,4795,Kiribati (Line Group),France – Polynésie française,2027-09-19 14:14,2027-09-19 23:14,9.0,1.0,,3.0,,,,,5.0,water column moved to a separate station
+32,2,HY2_3,Water-column station (hydrology/biology),hydro,-14.666,-151.269,4612,France (French Polynesia),,2027-09-21 03:17,2027-09-21 12:17,9,,2,3,2,1,1,,,
+33,2,Faaroa,Baie de Fa'aroa (Raiatea),station,-16.82,-151.397,50,"France (French Polynesia), internal waters",France – Polynésie française (eaux int.),2027-09-22 01:14,2027-09-22 09:14,8.0,,,,,,,8.0,,
+34,,Pap,Papeete,port,-17.5353,-149.5705,781,High seas,France – Polynésie française,2027-09-22 20:34,2027-09-22 20:34,0,,,,,,,,,

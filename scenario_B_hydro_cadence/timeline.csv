@@ -1,0 +1,68 @@
+leg,type,from,to,start_UTC_est,end_UTC_est,hours,distance_nm,operations,jurisdiction
+1,Transit,Nou,WP1_1,2027-07-13 08:00,2027-07-13 08:03,0.05,0.5,,
+1,Transit,WP1_1,WP1_2,2027-07-13 08:03,2027-07-13 08:03,0.0,,,
+1,Transit,WP1_2,WP1_3,2027-07-13 08:03,2027-07-13 08:03,0.0,,,
+1,Transit,WP1_3,Loy1,2027-07-13 08:03,2027-07-13 17:53,9.83,98.3,,
+1,Operations,Loy1,Loy1,2027-07-13 17:53,2027-07-14 03:53,10.0,,"CS 3 h, CA 7 h",France (New Caledonia)
+1,Transit,Loy1,HY1_1,2027-07-14 03:53,2027-07-15 18:00,38.11,381.1,,
+1,Operations,HY1_1,HY1_1,2027-07-15 18:00,2027-07-16 03:00,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",France (New Caledonia)
+1,Transit,HY1_1,WP1_5,2027-07-16 03:00,2027-07-18 10:24,55.42,554.2,,
+1,Transit,WP1_5,HY1_2,2027-07-18 10:24,2027-07-18 21:00,10.58,105.8,,
+1,Operations,HY1_2,HY1_2,2027-07-18 21:00,2027-07-19 06:00,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",Papua New Guinea
+1,Transit,HY1_2,OJP_1,2027-07-19 06:00,2027-07-19 15:11,9.19,91.9,,
+1,Operations,OJP_1,OJP_1,2027-07-19 15:11,2027-07-20 15:11,24.0,,"CS 6 h, C2 3 h, CA 12 h, MT 3 h",Papua New Guinea
+1,Transit,OJP_1,OJP_2,2027-07-20 15:11,2027-07-21 01:50,10.66,106.6,,
+1,Operations,OJP_2,OJP_2,2027-07-21 01:50,2027-07-21 11:50,10.0,,"CS 1 h, MT 3 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",Papua New Guinea
+1,Transit,OJP_2,OJP_3,2027-07-21 11:50,2027-07-22 10:00,22.16,221.6,,
+1,Operations,OJP_3,OJP_3,2027-07-22 10:00,2027-07-22 18:00,8.0,,"CS 1 h, C2 3 h, MT 4 h",Federated States of Micronesia
+1,Transit,OJP_3,OJP_4,2027-07-22 18:00,2027-07-23 07:23,13.37,133.7,,
+1,Operations,OJP_4,OJP_4,2027-07-23 07:23,2027-07-24 05:23,22.0,,"CS 1 h, CA 12 h, MT 3 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",Federated States of Micronesia
+1,Transit,OJP_4,OJP_5,2027-07-24 05:23,2027-07-25 06:28,25.09,250.9,,
+1,Operations,OJP_5,OJP_5,2027-07-25 06:28,2027-07-25 22:28,16.0,,"CS 1 h, CA 12 h, MT 3 h",High seas
+1,Transit,OJP_5,OJP_6,2027-07-25 22:28,2027-07-26 03:02,4.56,45.6,,
+1,Operations,OJP_6,OJP_6,2027-07-26 03:02,2027-07-27 01:02,22.0,,"CS 1 h, CA 12 h, MT 3 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",High seas
+1,Transit,OJP_6,OJP_7,2027-07-27 01:02,2027-07-27 07:38,6.61,66.1,,
+1,Operations,OJP_7,OJP_7,2027-07-27 07:38,2027-07-27 15:38,8.0,,"CS 1 h, C2 3 h, MT 4 h",High seas
+1,Transit,OJP_7,OJP_9,2027-07-27 15:38,2027-07-27 15:45,0.12,1.2,,
+1,Operations,OJP_9,OJP_9,2027-07-27 15:45,2027-07-28 05:45,14.0,,"CS 1 h, CA 8 h, MT 5 h",High seas
+1,Transit,OJP_9,OJP_8,2027-07-28 05:45,2027-07-28 09:11,3.43,34.3,,
+1,Operations,OJP_8,OJP_8,2027-07-28 09:11,2027-07-28 15:11,6.0,,"CS 1 h, MT 5 h",High seas
+1,Transit,OJP_8,HY1_3,2027-07-28 15:11,2027-07-29 06:02,14.84,148.4,,
+1,Operations,HY1_3,HY1_3,2027-07-29 06:02,2027-07-29 15:02,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",High seas
+1,Transit,HY1_3,NT_1,2027-07-29 15:02,2027-07-31 18:27,51.42,514.2,,
+1,Operations,NT_1,NT_1,2027-07-31 18:27,2027-08-01 22:27,28.0,,"CS 3 h, C2 3 h, CA 12 h, MT 4 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",Kiribati (Gilbert Islands)
+1,Transit,NT_1,NT_2,2027-08-01 22:27,2027-08-03 21:38,47.19,471.9,,
+1,Operations,NT_2,NT_2,2027-08-03 21:38,2027-08-05 01:38,28.0,,"CS 3 h, C2 3 h, CA 12 h, MT 4 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",Tuvalu
+1,Transit,NT_2,NT_3,2027-08-05 01:38,2027-08-06 07:28,29.83,298.3,,
+1,Transit,NT_3,HY1_4,2027-08-06 07:28,2027-08-07 13:38,30.17,301.7,,
+1,Operations,HY1_4,HY1_4,2027-08-07 13:38,2027-08-07 22:38,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",France (Wallis and Futuna)
+1,Transit,HY1_4,WP1_18,2027-08-07 22:38,2027-08-08 23:10,24.54,245.4,,
+1,Transit,WP1_18,Apia,2027-08-08 23:10,2027-08-09 02:31,3.35,33.5,,
+2,Transit,Apia,WP2_1,2027-08-31 08:00,2027-08-31 15:25,7.42,74.2,,
+2,Transit,WP2_1,ESAM,2027-08-31 15:25,2027-09-01 07:31,16.09,160.9,,
+2,Operations,ESAM,ESAM,2027-09-01 07:31,2027-09-01 16:31,9.0,,"CS 1 h, C2 3 h, MT 5 h",USA (American Samoa)
+2,Transit,ESAM,MH_3,2027-09-01 16:31,2027-09-02 23:36,31.09,310.9,,
+2,Operations,MH_3,MH_3,2027-09-02 23:36,2027-09-03 17:36,18.0,,"CS 1 h, CA 8 h, MT 3 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",NZ (Cook Islands)
+2,Transit,MH_3,MH_4,2027-09-03 17:36,2027-09-04 01:37,8.02,80.2,,
+2,Operations,MH_4,MH_4,2027-09-04 01:37,2027-09-04 17:37,16.0,,"CA 12 h, MT 4 h",NZ (Cook Islands)
+2,Transit,MH_4,MH_1,2027-09-04 17:37,2027-09-06 00:46,31.15,311.5,,
+2,Operations,MH_1,MH_1,2027-09-06 00:46,2027-09-06 12:46,12.0,,"CS 3 h, MT 3 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",High seas
+2,Transit,MH_1,MH_2,2027-09-06 12:46,2027-09-07 09:15,20.48,204.8,,
+2,Operations,MH_2,MH_2,2027-09-07 09:15,2027-09-08 06:15,21.0,,"CS 3 h, C2 3 h, CA 12 h, MT 3 h",High seas
+2,Transit,MH_2,HY2_1,2027-09-08 06:15,2027-09-09 00:46,18.52,185.2,,
+2,Operations,HY2_1,HY2_1,2027-09-09 00:46,2027-09-09 09:46,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",High seas
+2,Transit,HY2_1,LI_2,2027-09-09 09:46,2027-09-11 11:09,49.38,493.8,,
+2,Operations,LI_2,LI_2,2027-09-11 11:09,2027-09-12 16:09,29.0,,"CS 6 h, C2 1 h, CA 12 h, MT 3 h, C1 3 h, MN 2 h, NP 1 h, NM 1 h",USA (Palmyra Atoll)
+2,Transit,LI_2,LI_1,2027-09-12 16:09,2027-09-14 18:17,50.13,501.3,,
+2,Operations,LI_1,LI_1,2027-09-14 18:17,2027-09-15 18:17,24.0,,"CS 3 h, C2 3 h, CA 8 h, MT 3 h, C1 3 h, MN 2 h, NP 1 h, NM 1 h",Kiribati (Line Group)
+2,Transit,LI_1,CHAL,2027-09-15 18:17,2027-09-17 05:14,34.95,349.5,,
+2,Operations,CHAL,CHAL,2027-09-17 05:14,2027-09-17 14:14,9.0,,"CS 3 h, C2 1 h, MT 5 h",Kiribati (Line Group)
+2,Transit,CHAL,HY2_2,2027-09-17 14:14,2027-09-18 06:17,16.05,160.5,,
+2,Operations,HY2_2,HY2_2,2027-09-18 06:17,2027-09-18 15:17,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",High seas
+2,Transit,HY2_2,VOST,2027-09-18 15:17,2027-09-19 14:14,22.94,229.4,,
+2,Operations,VOST,VOST,2027-09-19 14:14,2027-09-19 23:14,9.0,,"CS 1 h, C2 3 h, MT 5 h",Kiribati (Line Group)
+2,Transit,VOST,HY2_3,2027-09-19 23:14,2027-09-21 03:17,28.06,280.6,,
+2,Operations,HY2_3,HY2_3,2027-09-21 03:17,2027-09-21 12:17,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",France (French Polynesia)
+2,Transit,HY2_3,Faaroa,2027-09-21 12:17,2027-09-22 01:14,12.95,129.5,,
+2,Operations,Faaroa,Faaroa,2027-09-22 01:14,2027-09-22 09:14,8.0,,CA 8 h,"France (French Polynesia), internal waters"
+2,Transit,Faaroa,Pap,2027-09-22 09:14,2027-09-22 20:34,11.32,113.2,,
