@@ -9,7 +9,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.lines import Line2D
 from geo import POLYS, asc, to360
 
-OUT = sys.argv[1]
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 R = json.load(open(os.path.join(OUT, 'results.json')))
 G = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data') + '/'
 CODES = ['CS', 'C1', 'C2', 'MN', 'NP', 'NM', 'CA', 'MT']
@@ -137,42 +137,47 @@ def ojp(scen, path):
 
 def T(s): return s[:16].replace('T', ' ') if s else ''
 
-for scen, folder in FOLDER.items():
-    d = os.path.join(OUT, folder); os.makedirs(d, exist_ok=True)
-    r = R[scen]
-    with open(os.path.join(d, 'stations.csv'), 'w', newline='') as f:
-        w = csv.writer(f)
-        w.writerow(['order', 'leg', 'site', 'name', 'type', 'lat', 'lon', 'depth_m_GMRT', 'jurisdiction_checked', 'jurisdiction_in_route_v2',
-                    'arrival_UTC_est', 'departure_UTC_est', 'ops_hours'] + [f'{c}_h' for c in CODES] + ['note'])
-        legof = {}
-        for e in r['events']:
-            if e.get('site'):
-                legof[e['site']] = e['leg']
-        for i, s in enumerate(r['stations'], 1):
-            note = 'water column moved to a separate station' if s.get('moved') else ('water column done at this station (cadence)' if s.get('coupled') else '')
-            if s.get('flag'): note = (note + '; ' if note else '') + s['flag']
-            w.writerow([i, legof.get(s['site'], ''), s['site'], s.get('name', ''), s['kind'], round(s['lat'], 4), round(s['lon'], 4), s.get('depth', ''),
-                        s.get('eez', ''), s.get('sheet_eez', '') or '', T(s.get('arr')), T(s.get('dep')), sum(s['ops'].values())] +
-                       [s['ops'].get(c, '') for c in CODES] + [note])
-    with open(os.path.join(d, 'timeline.csv'), 'w', newline='') as f:
-        w = csv.writer(f)
-        w.writerow(['leg', 'type', 'from', 'to', 'start_UTC_est', 'end_UTC_est', 'hours', 'distance_nm', 'operations', 'jurisdiction'])
-        for e in r['events']:
-            ops = e.get('ops') or {}
-            w.writerow([e['leg'], e['type'], e['frm'], e['to'], T(e['start']), T(e['end']), round(float(e['hours']), 2),
-                        round(float(e['nm']), 1) if e.get('nm') else '', ', '.join(f'{k} {v:g} h' for k, v in ops.items()), e.get('eez', '')])
-    with open(os.path.join(d, 'eez_crossings.csv'), 'w', newline='') as f:
-        w = csv.writer(f); w.writerow(['leg', 'zone', 'entry_UTC_est', 'exit_UTC_est'])
-        for g in r['segs']:
-            w.writerow([g['leg'], g['eez'], T(g['start']), T(g['end'])])
-    feats = []
-    for leg in ('1', '2'):
-        coords = [[round(lo, 4), round(la, 4)] for (t, la, lo, l) in r['track'] if l == leg]
-        feats.append(dict(type='Feature', properties=dict(leg=leg), geometry=dict(type='LineString', coordinates=coords)))
-    for s in r['stations']:
-        feats.append(dict(type='Feature', properties=dict(site=s['site'], type=s['kind'], jurisdiction=s.get('eez'), arrival=T(s.get('arr')),
-                                                         ops_hours=sum(s['ops'].values())), geometry=dict(type='Point', coordinates=[s['lon'], s['lat']])))
-    json.dump(dict(type='FeatureCollection', features=feats), open(os.path.join(d, 'route.geojson'), 'w'))
-    overview(scen, os.path.join(d, 'map_overview.png'))
-    ojp(scen, os.path.join(d, 'map_ontong_java.png'))
-    print('rendered', folder)
+def main():
+    for scen, folder in FOLDER.items():
+        d = os.path.join(OUT, folder); os.makedirs(d, exist_ok=True)
+        r = R[scen]
+        with open(os.path.join(d, 'stations.csv'), 'w', newline='') as f:
+            w = csv.writer(f)
+            w.writerow(['order', 'leg', 'site', 'name', 'type', 'lat', 'lon', 'depth_m_GMRT', 'jurisdiction_checked', 'jurisdiction_in_route_v2',
+                        'arrival_UTC_est', 'departure_UTC_est', 'ops_hours'] + [f'{c}_h' for c in CODES] + ['note'])
+            legof = {}
+            for e in r['events']:
+                if e.get('site'):
+                    legof[e['site']] = e['leg']
+            for i, s in enumerate(r['stations'], 1):
+                note = 'water column moved to a separate station' if s.get('moved') else ('water column done at this station (cadence)' if s.get('coupled') else '')
+                if s.get('flag'): note = (note + '; ' if note else '') + s['flag']
+                w.writerow([i, legof.get(s['site'], ''), s['site'], s.get('name', ''), s['kind'], round(s['lat'], 4), round(s['lon'], 4), s.get('depth', ''),
+                            s.get('eez', ''), s.get('sheet_eez', '') or '', T(s.get('arr')), T(s.get('dep')), sum(s['ops'].values())] +
+                           [s['ops'].get(c, '') for c in CODES] + [note])
+        with open(os.path.join(d, 'timeline.csv'), 'w', newline='') as f:
+            w = csv.writer(f)
+            w.writerow(['leg', 'type', 'from', 'to', 'start_UTC_est', 'end_UTC_est', 'hours', 'distance_nm', 'operations', 'jurisdiction'])
+            for e in r['events']:
+                ops = e.get('ops') or {}
+                w.writerow([e['leg'], e['type'], e['frm'], e['to'], T(e['start']), T(e['end']), round(float(e['hours']), 2),
+                            round(float(e['nm']), 1) if e.get('nm') else '', ', '.join(f'{k} {v:g} h' for k, v in ops.items()), e.get('eez', '')])
+        with open(os.path.join(d, 'eez_crossings.csv'), 'w', newline='') as f:
+            w = csv.writer(f); w.writerow(['leg', 'zone', 'entry_UTC_est', 'exit_UTC_est'])
+            for g in r['segs']:
+                w.writerow([g['leg'], g['eez'], T(g['start']), T(g['end'])])
+        feats = []
+        for leg in ('1', '2'):
+            coords = [[round(lo, 4), round(la, 4)] for (t, la, lo, l) in r['track'] if l == leg]
+            feats.append(dict(type='Feature', properties=dict(leg=leg), geometry=dict(type='LineString', coordinates=coords)))
+        for s in r['stations']:
+            feats.append(dict(type='Feature', properties=dict(site=s['site'], type=s['kind'], jurisdiction=s.get('eez'), arrival=T(s.get('arr')),
+                                                             ops_hours=sum(s['ops'].values())), geometry=dict(type='Point', coordinates=[s['lon'], s['lat']])))
+        json.dump(dict(type='FeatureCollection', features=feats), open(os.path.join(d, 'route.geojson'), 'w'))
+        overview(scen, os.path.join(d, 'map_overview.png'))
+        ojp(scen, os.path.join(d, 'map_ontong_java.png'))
+        print('rendered', folder)
+
+
+if __name__ == '__main__':
+    main()

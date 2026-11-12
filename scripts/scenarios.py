@@ -85,6 +85,14 @@ def place(s):
         z, d = OVERRIDE[s['site']]
     return z, d
 
+def margin_ok(pos, z, nm=10):
+    """True if every point 10 nm around pos is in the same zone z (keeps stations off EEZ boundaries)."""
+    for a in range(0, 360, 30):
+        dl = nm / 60 * math.cos(math.radians(a)); dL = nm / 60 * math.sin(math.radians(a)) / max(0.2, math.cos(math.radians(pos[0])))
+        if eez(pos[0] + dl, pos[1] + dL) != z:
+            return False
+    return True
+
 def schedule(leg, plan, hydro=None):
     """hydro: None, or dict(period=h, window=h) for scenario B (water-column ops on a fixed cadence)."""
     t = LEG[leg]['start']
@@ -108,7 +116,7 @@ def schedule(leg, plan, hydro=None):
                     break                      # end of leg: no extra stop just before port
                 # choose the stop time within T +/- window: high seas first, then already-permitted EEZ
                 best = None
-                for off in [0] + [x * sg for x in range(1, hydro['window'] + 1) for sg in (1, -1)]:
+                for off in [0] + [x * sg for x in range(1, hydro.get('search', hydro['window']) + 1) for sg in (1, -1)]:
                     tt = T + dt.timedelta(hours=off)
                     dh = (tt - t).total_seconds() / 3600
                     if dh <= 0.5 or dh >= h * (1 - f0) - 0.5:
@@ -116,6 +124,8 @@ def schedule(leg, plan, hydro=None):
                     f = f0 + dh / h
                     pos = interp(a, b, f); z = eez(*pos)
                     if (depth(*pos) or 0) < 500:
+                        continue
+                    if not margin_ok(pos, z):
                         continue
                     rank = 0 if z == 'High seas' else (1 if z.startswith(PERMITTED) else 2)
                     if best is None or rank < best[0]:
@@ -285,7 +295,7 @@ def avoid(legs, country):
 
 SCEN = {
     'A': dict(title='Scenario A — Route v2 as planned (EEZ zones checked)', legs=avoid_land(scen_A()), hydro=None),
-    'B': dict(title='Scenario B — Water-column stations every 2–3 days, partly decoupled from coring', legs=avoid_land(scen_A()), hydro=dict(period=60, window=12)),
+    'B': dict(title='Scenario B — Water-column stations every 2–3 days, partly decoupled from coring', legs=avoid_land(scen_A()), hydro=dict(period=60, window=12, search=18)),
     'C': dict(title='Scenario C — No access to Papua New Guinea waters', legs=avoid_land(scen_C()), hydro=None),
     'C_detour': dict(title='Scenario C (variant) — No PNG access, transit kept outside the PNG EEZ', legs=avoid_land(avoid(scen_C(), 'Papua')), hydro=None),
 }

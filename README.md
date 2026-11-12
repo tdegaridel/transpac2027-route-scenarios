@@ -70,13 +70,13 @@ This scenario follows these rules:
 - **Coring stations** keep the site survey, bottom CTD (C2), Calypso and multicorer.
 - **Water-column biology** (CTD 1 with eDNA, MultiNet, phytoplankton net, Bongo net) runs on a fixed cadence of 60 h, with a ±12 h window.
 - **When a coring station falls in the window**, the water column is done there (coupled). This happens at 10 coring stations: OJP_2, OJP_4, OJP_6, NT_1, NT_2, MH_3, MH_1, LI_2, LI_1 and VOST.
-- **Otherwise**, a separate 9-h water-column station (C1 2 h + C2 3 h + MultiNet 2 h + nets 2 h) is added on the transit. Its position is chosen in this order: high seas, then an EEZ already requested, then elsewhere. It must also be deeper than 500 m.
+- **Otherwise**, a separate 9-h water-column station (C1 2 h + C2 3 h + MultiNet 2 h + nets 2 h) is added on the transit. Its position is chosen in this order: high seas, then an EEZ already requested, then elsewhere. It must also be deeper than 500 m and at least 10 nm inside its zone, so that no station sits on an EEZ boundary (the search window is ±18 h).
 
 | Added station | Position | Depth | Zone | Est. date |
 |---|---|---|---|---|
-| HY1_1 | 15.23°S 162.53°E | 4440 m | France (New Caledonia) | 15 Jul |
-| HY1_2 | 5.46°S 157.46°E | 2149 m | Papua New Guinea | 18 Jul |
-| HY1_3 | 0.20°S 163.46°E | 4457 m | High seas | 29 Jul |
+| HY1_1 | 15.38°S 162.62°E | 4415 m | France (New Caledonia) | 15 Jul |
+| HY1_2 | 5.14°S 157.36°E | 1627 m | Papua New Guinea | 18 Jul |
+| HY1_3 | 0.19°S 163.30°E | 4457 m | High seas | 29 Jul |
 | HY1_4 | 12.15°S 176.16°W | 2247 m | France (Wallis and Futuna) | 7 Aug |
 | HY2_1 | 0.84°S 164.00°W | 5344 m | High seas | 9 Sep |
 | HY2_2 | 6.26°S 151.79°W | 5065 m | High seas | 18 Sep |
@@ -110,6 +110,9 @@ This scenario follows these rules:
 scripts/fetch_data.sh                       # downloads EEZ polygons and GMRT grids into data/ (~60 MB, not versioned)
 python3 scripts/scenarios.py .              # computes the scenarios -> results.json
 python3 scripts/render.py .                 # writes maps, CSV and GeoJSON into the scenario folders
+python3 scripts/country_maps.py . B charts  # charts for the consent applications, one set per coastal State
 ```
+
+`country_maps.py` draws, for each foreign State, an overview of the route with its EEZ highlighted and a zoom on each of its EEZ areas, with station positions, operations, estimated dates and a scale bar. The charts for scenario B are in [`scenario_B_hydro_cadence/charts_by_country`](scenario_B_hydro_cadence/charts_by_country).
 
 Requirements: Python 3 with numpy, matplotlib and openpyxl.

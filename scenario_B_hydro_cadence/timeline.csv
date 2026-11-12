@@ -4,12 +4,12 @@ leg,type,from,to,start_UTC_est,end_UTC_est,hours,distance_nm,operations,jurisdic
 1,Transit,WP1_2,WP1_3,2027-07-13 08:03,2027-07-13 08:03,0.0,,,
 1,Transit,WP1_3,Loy1,2027-07-13 08:03,2027-07-13 17:53,9.83,98.3,,
 1,Operations,Loy1,Loy1,2027-07-13 17:53,2027-07-14 03:53,10.0,,"CS 3 h, CA 7 h",France (New Caledonia)
-1,Transit,Loy1,HY1_1,2027-07-14 03:53,2027-07-15 18:00,38.11,381.1,,
-1,Operations,HY1_1,HY1_1,2027-07-15 18:00,2027-07-16 03:00,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",France (New Caledonia)
-1,Transit,HY1_1,WP1_5,2027-07-16 03:00,2027-07-18 10:24,55.42,554.2,,
-1,Transit,WP1_5,HY1_2,2027-07-18 10:24,2027-07-18 21:00,10.58,105.8,,
-1,Operations,HY1_2,HY1_2,2027-07-18 21:00,2027-07-19 06:00,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",Papua New Guinea
-1,Transit,HY1_2,OJP_1,2027-07-19 06:00,2027-07-19 15:11,9.19,91.9,,
+1,Transit,Loy1,HY1_1,2027-07-14 03:53,2027-07-15 17:00,37.11,371.1,,
+1,Operations,HY1_1,HY1_1,2027-07-15 17:00,2027-07-16 02:00,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",France (New Caledonia)
+1,Transit,HY1_1,WP1_5,2027-07-16 02:00,2027-07-18 10:24,56.42,564.2,,
+1,Transit,WP1_5,HY1_2,2027-07-18 10:24,2027-07-18 23:00,12.58,125.8,,
+1,Operations,HY1_2,HY1_2,2027-07-18 23:00,2027-07-19 08:00,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",Papua New Guinea
+1,Transit,HY1_2,OJP_1,2027-07-19 08:00,2027-07-19 15:11,7.19,71.9,,
 1,Operations,OJP_1,OJP_1,2027-07-19 15:11,2027-07-20 15:11,24.0,,"CS 6 h, C2 3 h, CA 12 h, MT 3 h",Papua New Guinea
 1,Transit,OJP_1,OJP_2,2027-07-20 15:11,2027-07-21 01:50,10.66,106.6,,
 1,Operations,OJP_2,OJP_2,2027-07-21 01:50,2027-07-21 11:50,10.0,,"CS 1 h, MT 3 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",Papua New Guinea
@@ -27,9 +27,9 @@ leg,type,from,to,start_UTC_est,end_UTC_est,hours,distance_nm,operations,jurisdic
 1,Operations,OJP_9,OJP_9,2027-07-27 15:45,2027-07-28 05:45,14.0,,"CS 1 h, CA 8 h, MT 5 h",High seas
 1,Transit,OJP_9,OJP_8,2027-07-28 05:45,2027-07-28 09:11,3.43,34.3,,
 1,Operations,OJP_8,OJP_8,2027-07-28 09:11,2027-07-28 15:11,6.0,,"CS 1 h, MT 5 h",High seas
-1,Transit,OJP_8,HY1_3,2027-07-28 15:11,2027-07-29 06:02,14.84,148.4,,
-1,Operations,HY1_3,HY1_3,2027-07-29 06:02,2027-07-29 15:02,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",High seas
-1,Transit,HY1_3,NT_1,2027-07-29 15:02,2027-07-31 18:27,51.42,514.2,,
+1,Transit,OJP_8,HY1_3,2027-07-28 15:11,2027-07-29 05:02,13.84,138.4,,
+1,Operations,HY1_3,HY1_3,2027-07-29 05:02,2027-07-29 14:02,9.0,,"C1 2 h, C2 3 h, MN 2 h, NP 1 h, NM 1 h",High seas
+1,Transit,HY1_3,NT_1,2027-07-29 14:02,2027-07-31 18:27,52.42,524.2,,
 1,Operations,NT_1,NT_1,2027-07-31 18:27,2027-08-01 22:27,28.0,,"CS 3 h, C2 3 h, CA 12 h, MT 4 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",Kiribati (Gilbert Islands)
 1,Transit,NT_1,NT_2,2027-08-01 22:27,2027-08-03 21:38,47.19,471.9,,
 1,Operations,NT_2,NT_2,2027-08-03 21:38,2027-08-05 01:38,28.0,,"CS 3 h, C2 3 h, CA 12 h, MT 4 h, C1 2 h, MN 2 h, NP 1 h, NM 1 h",Tuvalu
